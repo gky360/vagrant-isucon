@@ -98,7 +98,7 @@ Vagrant.configure("2") do |config|
       mkdir -p ${GOPATH}/src/github.com/isucon/
       cd ${GOPATH}/src/github.com/isucon
       rm -rf isucon6-qualify
-      git clone https://github.com/isucon/isucon6-qualify.git
+      git clone https://github.com/gky360/isucon6-qualify.git
       (
         cd isucon6-qualify/bench
 	go get github.com/Songmu/timeout
@@ -136,7 +136,7 @@ Vagrant.configure("2") do |config|
       export PATH=$PATH:/usr/local/go/bin
 
       rm -rf isucon6-qualify
-      git clone https://github.com/isucon/isucon6-qualify.git
+      git clone https://github.com/gky360/isucon6-qualify.git
       sed -i -e 's:--disable-phar::' isucon6-qualify/provisioning/image/ansible/02_xbuild.yml
       (
         cd isucon6-qualify
