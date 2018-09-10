@@ -96,6 +96,11 @@ Vagrant.configure("2") do |config|
 	PYTHONUNBUFFERED=1 ANSIBLE_FORCE_COLOR=true ansible-playbook -i local image.yml
       )
       rm -rf ansible-isucon
+
+      echo 'export PATH=/home/isucon/local/go/bin:$PATH' >> ~/.bashrc
+      echo 'export PATH=/home/isucon/local/go/bin:$PATH' >> ~/.zshrc
+      echo 'export GOROOT=/home/isucon/local/go' >> ~/.bashrc
+      echo 'export GOROOT=/home/isucon/local/go' >> ~/.zshrc
     SHELL
   end
 
@@ -114,6 +119,11 @@ Vagrant.configure("2") do |config|
         PYTHONUNBUFFERED=1 ANSIBLE_FORCE_COLOR=true ansible-playbook -i local bench.yml
       )
       rm -rf ansible-isucon
+
+      echo 'export PATH=/home/isucon/local/go/bin:$PATH' >> ~/.bashrc
+      echo 'export PATH=/home/isucon/local/go/bin:$PATH' >> ~/.zshrc
+      echo 'export GOROOT=/home/isucon/local/go' >> ~/.bashrc
+      echo 'export GOROOT=/home/isucon/local/go' >> ~/.zshrc
     SHELL
   end
 end
